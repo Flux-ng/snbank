@@ -2,7 +2,8 @@ import json
 import os
 import random
 
-print('-----Welcome UCB Platform-----')
+header= '-----Welcome to SNBANK Platform-----'
+print(header.upper())
 
 def login_algorithm():
     signed_in = False
