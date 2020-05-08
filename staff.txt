@@ -1,12 +1,13 @@
- staff_info = [{Username: 'Clement',
-                Password: 'mmaakon',
-                Email Address: 'felicle@gmail.com',
-                Full Name: Felicity 'Clement Nduonyi'
-              },
+[
+{"Username": "uriel",
+  "Password": "queen",
+  "Email": "uriel@gmail.com",
+  "FullName": "Uriel Imoh"},
 
-             {Username: 'okpo'
-              Password: 'okobido'
-              Email Address: 'okpo111@gmail.com'
-              Full Name: 'Okpo Udi Udi'
-             }
-           ]
+ {"Username": "isabel",
+  "Password": "isa2020",
+  "Email": "sabel@gmail.com",
+  "fullName": "Isabel Lewis"}
+  ]
+
+
