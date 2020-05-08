@@ -14,7 +14,8 @@ view customer account details using the customers' account number. Any time a us
 The valid staff data are stated below.
 staff1:
 username: uriel,
-password: queen
+password: queen,
+
 staff2:
 username: isabel,
 password: isa2020
