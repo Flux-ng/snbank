@@ -7,13 +7,16 @@ print(header.upper())
 
 def login_algorithm():
     signed_in = False
-    login_action = input('Enter login to sign in/close to close the APP ').lower()
-    if login_action == 'close':
-        print('App closed! Thank you.')
-        quit()
-    else:
-        #Sign in here
-        if login_action == 'login':
+    while True:
+        try:
+            login_action = input(str('Enter "login" to sign in/"close" to close the APP ')).lower()
+        except ValueError:
+            print('Invalid input')
+            continue
+        if login_action == 'close':
+            print('App closed! Thank you.')
+            quit()
+        elif login_action == 'login':
             while not signed_in:
                 username = str(input('Enter your registered username: '))
                 password = str(input('Enter your registered password: '))
@@ -31,7 +34,7 @@ def login_algorithm():
         if signed_in:
             is_done = False
             while not is_done:
-                operation_choice = input('Press N to create a new bank A/C, C to check A/C details, L to logout ')
+                operation_choice = input('Press N to create a new bank A/C, C to check A/C details, L to logout ').upper()
                 if operation_choice == 'N':
                     print('Your are in New Acc creation environment')
                     print('Personal Account Opening Form ')
@@ -58,7 +61,7 @@ def login_algorithm():
                         with open('customer.txt', 'w') as file:
                             json.dump(customer_data, file)
                             print(acc_number)
-                elif operation_choice == 'c':
+                elif operation_choice == 'C':
 
                     #checking customers' account details
                     customer_ban = str(input("Enter customers' acc number "))
@@ -77,9 +80,11 @@ def login_algorithm():
                             print('Sorry no record found for this number. Try again')
 
                             #Program terminated
-                elif operation_choice == 'l':
+                elif operation_choice == 'L':
                     is_done = True
-                    print('Session elapse and App closed. Thank you!')
+                    print('You are now signed out. Thank you!')
+login_algorithm()
+
 
 
       
